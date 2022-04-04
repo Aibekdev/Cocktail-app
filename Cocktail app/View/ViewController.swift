@@ -7,13 +7,11 @@
 
 import UIKit
 import TTGTagCollectionView
-import Alamofire
 
 
 
 class ViewController: UIViewController, TTGTextTagCollectionViewDelegate, UITextFieldDelegate {
 
-    
     let collectionView = TTGTextTagCollectionView()
     
     // the keyboard disappers when you tap return button
@@ -22,15 +20,11 @@ class ViewController: UIViewController, TTGTextTagCollectionViewDelegate, UIText
         return true
     }
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
         // Do any additional setup after loading the view.
-        
-        
         
         //The keyboard disappears when you touch somewhere
         let tapGesture = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
@@ -49,11 +43,8 @@ class ViewController: UIViewController, TTGTextTagCollectionViewDelegate, UIText
         textField.delegate = self
         textField.textAlignment = .center
         
-            
         self.view.addSubview(textField)
 
-        
-        
         // Tag cloud code
         
         collectionView.alignment = .center
@@ -69,13 +60,10 @@ class ViewController: UIViewController, TTGTextTagCollectionViewDelegate, UIText
         config.tagBorderWidth = 1
         config.tagTextFont = UIFont.boldSystemFont(ofSize: 20)
         
-        
         collectionView.addTags(["Negroni", "Daiquiri", "Dry Martini", "Espresso Martini", "Whiskey Sour", "Mojito", "Dark and Stromy"], with: config)
         
 }
     
-    
-
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         collectionView.frame = CGRect(x: 0, y: 100, width: view.frame.size.width, height: 300)

@@ -5,24 +5,17 @@
 //  Created by Aibek on 02.04.2022.
 //
 import UIKit
-import Alamofire
 
 
 class Drinks {
     
-    struct Returned: Codable {
-        var drinks: [Drink]
-    }
     
-    struct Drink: Codable {
-        var strDrink = ""
-    }
     
-    let urlString = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?a"
+    let urlString = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic"
     
-    var drinkArray: [Drink] = []
+    private var drinkArray: [Drink] = []
     
-    func getData(completed: @escaping ()->()) {
+    private func getData(completed: @escaping ()->()) {
         print("We are accessing the url \(urlString)")
         
         //creating a url
@@ -33,7 +26,6 @@ class Drinks {
         }
         
         let session = URLSession.shared
-        
         let task = session.dataTask(with: url) { data, response, error in
             if let error = error {
             print("ERROR: \(error.localizedDescription)")
