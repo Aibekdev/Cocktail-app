@@ -9,7 +9,6 @@ import UIKit
 import TTGTagCollectionView
 
 
-
 class ViewController: UIViewController, TTGTextTagCollectionViewDelegate, UITextFieldDelegate {
 
     let collectionView = TTGTextTagCollectionView()

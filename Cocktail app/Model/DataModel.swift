@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Data: Codable {
+struct Returned: Codable {
     var drinks: [Drink]
 }
 

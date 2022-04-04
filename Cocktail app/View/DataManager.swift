@@ -6,10 +6,7 @@
 //
 import UIKit
 
-
 class Drinks {
-    
-    
     
     let urlString = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic"
     
@@ -20,7 +17,6 @@ class Drinks {
         
         //creating a url
         guard let url = URL(string: urlString) else {
-            
             print ("Error: couldn't create a URL from \(urlString)"); completed()
             return
         }
@@ -32,12 +28,10 @@ class Drinks {
             
         }
         do {
-            let returned = try JSONDecoder ().decode (Returned.self, from: data!)
+            let returned = try JSONDecoder().decode (Returned.self, from: data!)
             self.drinkArray = self.drinkArray + returned.drinks
-            
         } catch {
             print ("JSON ERROR")
-            
         }
         completed()
     }
