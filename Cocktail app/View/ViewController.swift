@@ -9,28 +9,28 @@ import UIKit
 import TTGTagCollectionView
 
 
-class ViewController: UIViewController, TTGTextTagCollectionViewDelegate, UITextFieldDelegate {
-
-    let collectionView = TTGTextTagCollectionView()
+class ViewController: UIViewController, TTGTextTagCollectionViewDelegate {
     
+    let collectionView = TTGTextTagCollectionView()
+    let textField = UITextField(frame: CGRect(x: 10, y: 500, width: UIScreen.main.bounds.size.width - 20, height: 50.0))
     // the keyboard disappers when you tap return button
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-    textField.resignFirstResponder()
+        textField.resignFirstResponder()
         return true
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         // Do any additional setup after loading the view.
         
         //The keyboard disappears when you touch somewhere
         let tapGesture = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
-         view.addGestureRecognizer(tapGesture)
-
+        view.addGestureRecognizer(tapGesture)
         
-        let textField = UITextField(frame: CGRect(x: 10, y: 500, width: UIScreen.main.bounds.size.width - 20, height: 50.0))
+        
+        
         textField.backgroundColor = .white
         textField.borderStyle = .roundedRect
         textField.layer.borderColor = UIColor(white: 0.5, alpha: 0.3).cgColor
@@ -39,11 +39,10 @@ class ViewController: UIViewController, TTGTextTagCollectionViewDelegate, UIText
         textField.placeholder = "Coctail name"
         textField.layer.shadowOpacity = 1
         textField.font = UIFont.systemFont(ofSize: 20)
-        textField.delegate = self
         textField.textAlignment = .center
         
         self.view.addSubview(textField)
-
+        
         // Tag cloud code
         
         collectionView.alignment = .center
@@ -59,19 +58,26 @@ class ViewController: UIViewController, TTGTextTagCollectionViewDelegate, UIText
         config.tagBorderWidth = 1
         config.tagTextFont = UIFont.boldSystemFont(ofSize: 20)
         
-        collectionView.addTags(["Negroni", "Daiquiri", "Dry Martini", "Espresso Martini", "Whiskey Sour", "Mojito", "Dark and Stromy"], with: config)
-        
-}
+        DataManager.getData {[weak self] items in
+            guard let tags = items else {return}
+            self?.collectionView.addTags(tags, with: config)
+        }
+    }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         collectionView.frame = CGRect(x: 0, y: 100, width: view.frame.size.width, height: 300)
     }
-    
-    
-    }
-    
+}
 
+extension ViewController: UITextFieldDelegate {
+    private func handlerTextField() {
+        textField.delegate = self
+    }
+//     func textFieldDidChangeSelection(_ textField: UITextField) {
+//        <#code#>
+//    }
+}
 
 
 

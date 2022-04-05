@@ -20,6 +20,7 @@
 		A72F7D9F27F72E11003D18C6 /* Cocktail_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72F7D9E27F72E11003D18C6 /* Cocktail_appUITests.swift */; };
 		A72F7DA127F72E11003D18C6 /* Cocktail_appUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72F7DA027F72E11003D18C6 /* Cocktail_appUITestsLaunchTests.swift */; };
 		A764A4BA27FAFB5A00A8EF5C /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A764A4B927FAFB5A00A8EF5C /* DataModel.swift */; };
+		A776070727FCB9EA00BC0ED5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A776070627FCB9EA00BC0ED5 /* Constants.swift */; };
 		A77D585427F8A252009ACF28 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77D585327F8A252009ACF28 /* DataManager.swift */; };
 		E75CE4F723AE80242902EF5F /* Pods_Cocktail_appTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B985B32F3CC48F1B956B493B /* Pods_Cocktail_appTests.framework */; };
 /* End PBXBuildFile section */
@@ -61,6 +62,7 @@
 		A72F7D9E27F72E11003D18C6 /* Cocktail_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cocktail_appUITests.swift; sourceTree = "<group>"; };
 		A72F7DA027F72E11003D18C6 /* Cocktail_appUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cocktail_appUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A764A4B927FAFB5A00A8EF5C /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		A776070627FCB9EA00BC0ED5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A77D585327F8A252009ACF28 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		B985B32F3CC48F1B956B493B /* Pods_Cocktail_appTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cocktail_appTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA7984172EBE4104822C28B2 /* Pods_Cocktail_app_Cocktail_appUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cocktail_app_Cocktail_appUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,7 +128,7 @@
 				A72F7D7F27F72E0F003D18C6 /* SceneDelegate.swift */,
 				A764A4B627FAFA3200A8EF5C /* Model */,
 				A764A4B727FAFA4400A8EF5C /* View */,
-				A764A4B827FAFA4C00A8EF5C /* Controller */,
+				A764A4B827FAFA4C00A8EF5C /* Helpers */,
 				A72F7D8327F72E0F003D18C6 /* Main.storyboard */,
 				A72F7D8627F72E10003D18C6 /* Assets.xcassets */,
 				A72F7D8827F72E10003D18C6 /* LaunchScreen.storyboard */,
@@ -170,11 +172,12 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		A764A4B827FAFA4C00A8EF5C /* Controller */ = {
+		A764A4B827FAFA4C00A8EF5C /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				A776070627FCB9EA00BC0ED5 /* Constants.swift */,
 			);
-			path = Controller;
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		BE5214D7C291A6BF0AD99697 /* Pods */ = {
@@ -443,6 +446,7 @@
 				A77D585427F8A252009ACF28 /* DataManager.swift in Sources */,
 				A714B55027F86EAF002FBBB2 /* Colors.swift in Sources */,
 				A72F7D7E27F72E0F003D18C6 /* AppDelegate.swift in Sources */,
+				A776070727FCB9EA00BC0ED5 /* Constants.swift in Sources */,
 				A72F7D8027F72E0F003D18C6 /* SceneDelegate.swift in Sources */,
 				A764A4BA27FAFB5A00A8EF5C /* DataModel.swift in Sources */,
 			);

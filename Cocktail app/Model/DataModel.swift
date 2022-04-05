@@ -7,10 +7,10 @@
 
 import Foundation
 
-struct Returned: Codable {
+struct DataModel: Codable {
     var drinks: [Drink]
 }
 
 struct Drink: Codable {
-    var strDrink = ""
+    var strDrink: String
 }
