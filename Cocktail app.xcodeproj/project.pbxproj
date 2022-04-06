@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		3FA5DC7E22B9663C054B84D5 /* Pods_Cocktail_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBC7F34D274E38A84DAC5F70 /* Pods_Cocktail_app.framework */; };
 		903977CCB6A94EE32A15869C /* Pods_Cocktail_app_Cocktail_appUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA7984172EBE4104822C28B2 /* Pods_Cocktail_app_Cocktail_appUITests.framework */; };
-		A714B55027F86EAF002FBBB2 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A714B54F27F86EAF002FBBB2 /* Colors.swift */; };
+		A714B55027F86EAF002FBBB2 /* UIColors+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A714B54F27F86EAF002FBBB2 /* UIColors+Extensions.swift */; };
 		A72F7D7E27F72E0F003D18C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72F7D7D27F72E0F003D18C6 /* AppDelegate.swift */; };
 		A72F7D8027F72E0F003D18C6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72F7D7F27F72E0F003D18C6 /* SceneDelegate.swift */; };
 		A72F7D8227F72E0F003D18C6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72F7D8127F72E0F003D18C6 /* ViewController.swift */; };
@@ -47,7 +47,7 @@
 		14F73052ED5C7F0E50B3B8A6 /* Pods-Cocktail app-Cocktail appUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cocktail app-Cocktail appUITests.debug.xcconfig"; path = "Target Support Files/Pods-Cocktail app-Cocktail appUITests/Pods-Cocktail app-Cocktail appUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		3142B049DAB30EF9A9243638 /* Pods-Cocktail app-Cocktail appUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cocktail app-Cocktail appUITests.release.xcconfig"; path = "Target Support Files/Pods-Cocktail app-Cocktail appUITests/Pods-Cocktail app-Cocktail appUITests.release.xcconfig"; sourceTree = "<group>"; };
 		3199A508317950EAE9372AA8 /* Pods-Cocktail app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cocktail app.release.xcconfig"; path = "Target Support Files/Pods-Cocktail app/Pods-Cocktail app.release.xcconfig"; sourceTree = "<group>"; };
-		A714B54F27F86EAF002FBBB2 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		A714B54F27F86EAF002FBBB2 /* UIColors+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColors+Extensions.swift"; sourceTree = "<group>"; };
 		A72F7D7A27F72E0F003D18C6 /* Cocktail app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cocktail app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A72F7D7D27F72E0F003D18C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A72F7D7F27F72E0F003D18C6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -129,10 +129,8 @@
 				A764A4B627FAFA3200A8EF5C /* Model */,
 				A764A4B727FAFA4400A8EF5C /* View */,
 				A764A4B827FAFA4C00A8EF5C /* Helpers */,
-				A72F7D8327F72E0F003D18C6 /* Main.storyboard */,
-				A72F7D8627F72E10003D18C6 /* Assets.xcassets */,
-				A72F7D8827F72E10003D18C6 /* LaunchScreen.storyboard */,
 				A72F7D8B27F72E10003D18C6 /* Info.plist */,
+				A776070A27FCD83800BC0ED5 /* Resourses */,
 			);
 			path = "Cocktail app";
 			sourceTree = "<group>";
@@ -165,7 +163,6 @@
 		A764A4B727FAFA4400A8EF5C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				A714B54F27F86EAF002FBBB2 /* Colors.swift */,
 				A77D585327F8A252009ACF28 /* DataManager.swift */,
 				A72F7D8127F72E0F003D18C6 /* ViewController.swift */,
 			);
@@ -175,9 +172,28 @@
 		A764A4B827FAFA4C00A8EF5C /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				A714B54F27F86EAF002FBBB2 /* UIColors+Extensions.swift */,
+				A776070927FCD80A00BC0ED5 /* Extensions */,
 				A776070627FCB9EA00BC0ED5 /* Constants.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		A776070927FCD80A00BC0ED5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A776070A27FCD83800BC0ED5 /* Resourses */ = {
+			isa = PBXGroup;
+			children = (
+				A72F7D8827F72E10003D18C6 /* LaunchScreen.storyboard */,
+				A72F7D8327F72E0F003D18C6 /* Main.storyboard */,
+				A72F7D8627F72E10003D18C6 /* Assets.xcassets */,
+			);
+			path = Resourses;
 			sourceTree = "<group>";
 		};
 		BE5214D7C291A6BF0AD99697 /* Pods */ = {
@@ -444,7 +460,7 @@
 			files = (
 				A72F7D8227F72E0F003D18C6 /* ViewController.swift in Sources */,
 				A77D585427F8A252009ACF28 /* DataManager.swift in Sources */,
-				A714B55027F86EAF002FBBB2 /* Colors.swift in Sources */,
+				A714B55027F86EAF002FBBB2 /* UIColors+Extensions.swift in Sources */,
 				A72F7D7E27F72E0F003D18C6 /* AppDelegate.swift in Sources */,
 				A776070727FCB9EA00BC0ED5 /* Constants.swift in Sources */,
 				A72F7D8027F72E0F003D18C6 /* SceneDelegate.swift in Sources */,
